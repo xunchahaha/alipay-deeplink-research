@@ -51,7 +51,7 @@ External SMS/QQ/WeChat Link
 |------|--------|
 | 2026-02-25 | Initial report sent to Ant Group SRC (TLS/SSL findings) |
 | 2026-03-07 | Full report V3 sent with 17 vulnerabilities + 308 log entries |
-| 2026-03-08 | Ant Group response: "These are normal features" (正常功能) |
+| 2026-03-10 | Ant Group response: "These are normal features" (正常功能) |
 | 2026-03-11 | Public disclosure after vendor declined to acknowledge |
 
 ## Repository Structure
