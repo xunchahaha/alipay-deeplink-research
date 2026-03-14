@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Test</title>
+<style>
+body{background:#fff;padding:20px;font-size:16px}
+</style>
+</head>
+<body>
+<h1>测试页面</h1>
+<p>如果你能看到这段文字，说明页面加载成功。</p>
+<div id="status">检测中...</div>
+
+<script>
+setTimeout(function() {
+  document.getElementById('status').innerHTML = 'JavaScript 正常运行';
+
+  if (window.AlipayJSBridge) {
+    document.getElementById('status').innerHTML += '<br>✅ AlipayJSBridge 已加载';
+  } else {
+    document.getElementById('status').innerHTML += '<br>❌ AlipayJSBridge 未加载';
+  }
+}, 500);
+</script>
+</body>
+</html>
