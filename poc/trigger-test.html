@@ -17,13 +17,13 @@ h2{margin-top:20px}
 <h1>支付宝 DeepLink 测试</h1>
 <p>点击下面的按钮测试不同的触发方式：</p>
 
-<h2>方法1：直接 Scheme</h2>
-<a href="alipays://platformapi/startapp?appId=20000067&url=https://xunchahaha.github.io/alipay-deeplink-research/poc/test.html" class="btn btn1">
+<h2>方法1：直接 Scheme（URL编码）</h2>
+<a href="alipays://platformapi/startapp?appId=20000067&url=https%3A%2F%2Fxunchahaha.github.io%2Falipay-deeplink-research%2Fpoc%2Ftest.html" class="btn btn1">
   点击测试（直接scheme）
 </a>
 
-<h2>方法2：Intent Scheme (Android)</h2>
-<a href="intent://platformapi/startapp?appId=20000067&url=https://xunchahaha.github.io/alipay-deeplink-research/poc/test.html#Intent;scheme=alipays;package=com.eg.android.AlipayGphone;end" class="btn btn2">
+<h2>方法2：Intent Scheme (Android) - 推荐</h2>
+<a href="intent://platformapi/startapp?appId=20000067&url=https%3A%2F%2Fxunchahaha.github.io%2Falipay-deeplink-research%2Fpoc%2Ftest.html#Intent;scheme=alipays;package=com.eg.android.AlipayGphone;end" class="btn btn2">
   点击测试（Android Intent）
 </a>
 
